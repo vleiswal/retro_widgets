@@ -23,31 +23,65 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Container(
-        height: 200,
-        color: Colors.red,
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        child: Wrap(
           children: <Widget>[
             ElevatedButton(
               child: Text('Button 1'),
               onPressed: () {},
             ),
             ElevatedButton(
-              child: Text('Button 1'),
+              child: Text('Button 2'),
               onPressed: () {},
             ),
             ElevatedButton(
-              child: Text('Button 1'),
+              child: Text('Button 3'),
+              onPressed: () {},
+            ),
+            ElevatedButton(
+              child: Text('Button 4'),
+              onPressed: () {},
+            ),
+            ElevatedButton(
+              child: Text('Button 5'),
               onPressed: () {},
             ),
           ],
         ),
-      )),
+      ),
     );
   }
 }
+
+// class MyHomePage extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//           child: Container(
+//         height: 200,
+//         color: Colors.red,
+//         child: Row(
+//           mainAxisSize: MainAxisSize.max,
+//           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//           children: <Widget>[
+//             ElevatedButton(
+//               child: text:'Button 1'),
+//               onPressed: () {},
+//             ),
+//             ElevatedButton(
+//               child: text:'Button 1'),
+//               onPressed: () {},
+//             ),
+//             ElevatedButton(
+//               child: text:'Button 1'),
+//               onPressed: () {},
+//             ),
+//           ],
+//         ),
+//       )),
+//     );
+//   }
+// }
 
 
 // class MyHomePage extends StatelessWidget {
@@ -92,7 +126,7 @@ class MyHomePage extends StatelessWidget {
 //             ),
 //             shape: BoxShape.circle,
 //           ),
-//           child: Text(
+//           child: text:
 //             'Flutter Essenstials',
 //             style: TextStyle(fontSize: 20, color: Colors.white),
 //           ),
