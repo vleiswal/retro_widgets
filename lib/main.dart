@@ -24,6 +24,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Wrap(
+          direction: Axis.horizontal,
           children: <Widget>[
             ElevatedButton(
               child: Text('Button 1'),
@@ -37,14 +38,14 @@ class MyHomePage extends StatelessWidget {
               child: Text('Button 3'),
               onPressed: () {},
             ),
-            ElevatedButton(
-              child: Text('Button 4'),
-              onPressed: () {},
-            ),
-            ElevatedButton(
-              child: Text('Button 5'),
-              onPressed: () {},
-            ),
+            // ElevatedButton(
+            //   child: Text('Button 4'),
+            //   onPressed: () {},
+            // ),
+            // ElevatedButton(
+            //   child: Text('Button 5'),
+            //   onPressed: () {},
+            // ),
           ],
         ),
       ),
@@ -82,7 +83,6 @@ class MyHomePage extends StatelessWidget {
 //     );
 //   }
 // }
-
 
 // class MyHomePage extends StatelessWidget {
 //   @override
