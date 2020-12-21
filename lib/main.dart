@@ -23,35 +23,59 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-          child: Container(
-        width: 400,
-        height: 700,
-        color: Colors.grey,
-        child: Stack(
-          alignment: Alignment.topRight,
-          fit: StackFit.loose,
-          clipBehavior: Clip.antiAlias,
-          children: <Widget>[
-            Container(
-              width: 200,
-              height: 200,
-              color: Colors.red,
-            ),
-            Positioned(
-              bottom: -20,
-              right: 0,
-              child: Container(
-                width: 100,
-                height: 100,
-                color: Colors.blue,
+        child: Container(
+          color: Colors.red,
+          child: Padding(
+            padding:
+                EdgeInsets.lerp(EdgeInsets.all(10), EdgeInsets.all(20), 0.1),
+            child: Text(
+              'Welcome',
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
               ),
             ),
-          ],
+          ),
         ),
-      )),
+      ),
     );
   }
 }
+
+// class MyHomePage extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//           child: Container(
+//         width: 400,
+//         height: 700,
+//         color: Colors.grey,
+//         child: Stack(
+//           alignment: Alignment.topRight,
+//           fit: StackFit.loose,
+//           clipBehavior: Clip.antiAlias,
+//           children: <Widget>[
+//             Container(
+//               width: 200,
+//               height: 200,
+//               color: Colors.red,
+//             ),
+//             Positioned(
+//               bottom: -20,
+//               right: 0,
+//               child: Container(
+//                 width: 100,
+//                 height: 100,
+//                 color: Colors.blue,
+//               ),
+//             ),
+//           ],
+//         ),
+//       )),
+//     );
+//   }
+// }
 
 // class MyHomePage extends StatelessWidget {
 //   @override
