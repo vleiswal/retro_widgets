@@ -23,35 +23,70 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Wrap(
-          direction: Axis.horizontal,
+          child: Container(
+        width: 400,
+        height: 700,
+        color: Colors.grey,
+        child: Stack(
+          alignment: Alignment.topRight,
+          fit: StackFit.loose,
+          clipBehavior: Clip.antiAlias,
           children: <Widget>[
-            ElevatedButton(
-              child: Text('Button 1'),
-              onPressed: () {},
+            Container(
+              width: 200,
+              height: 200,
+              color: Colors.red,
             ),
-            ElevatedButton(
-              child: Text('Button 2'),
-              onPressed: () {},
+            Positioned(
+              bottom: -20,
+              right: 0,
+              child: Container(
+                width: 100,
+                height: 100,
+                color: Colors.blue,
+              ),
             ),
-            ElevatedButton(
-              child: Text('Button 3'),
-              onPressed: () {},
-            ),
-            // ElevatedButton(
-            //   child: Text('Button 4'),
-            //   onPressed: () {},
-            // ),
-            // ElevatedButton(
-            //   child: Text('Button 5'),
-            //   onPressed: () {},
-            // ),
           ],
         ),
-      ),
+      )),
     );
   }
 }
+
+// class MyHomePage extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Center(
+//         child: Wrap(
+//           direction: Axis.horizontal,
+//           children: <Widget>[
+//             ElevatedButton(
+//               child: Text('Button 1'),
+//               onPressed: () {},
+//             ),
+//             ElevatedButton(
+//               child: Text('Button 2'),
+//               onPressed: () {},
+//             ),
+//             ElevatedButton(
+//               child: Text('Button 3'),
+//               onPressed: () {},
+//             ),
+//             // ElevatedButton(
+//             //   child: Text('Button 4'),
+//             //   onPressed: () {},
+//             // ),
+//             // ElevatedButton(
+//             //   child: Text('Button 5'),
+//             //   onPressed: () {},
+//             // ),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 // class MyHomePage extends StatelessWidget {
 //   @override
