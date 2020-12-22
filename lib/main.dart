@@ -19,25 +19,48 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
+  final ScrollController controller = ScrollController();
+
+  List<Widget> layoutChildren(double boxSide) {
+    return [
+      Container(
+        width: boxSide,
+        height: boxSide,
+        color: Colors.red,
+        alignment: Alignment.center,
+        child: Text('Text One',
+            style: TextStyle(color: Colors.white, fontSize: 25)),
+      ),
+      Container(
+        width: boxSide,
+        height: boxSide,
+        color: Colors.green,
+        alignment: Alignment.center,
+        child: Text('Text Two',
+            style: TextStyle(color: Colors.white, fontSize: 25)),
+      ),
+    ];
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    Orientation orientation = MediaQuery.of(context).orientation;
+    double boxSide = size.shortestSide - 50;
     return Scaffold(
-      body: Center(
-        child: Container(
-          color: Colors.blue,
-          child: Padding(
-            padding: EdgeInsets.all(20),
-            child: Text(
-              'Welcome',
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.white,
-              ),
-            ),
-          ),
-        ),
-      ),
+      body: Center(child: Builder(builder: (context) {
+        if (orientation.index == Orientation.landscape.index) {
+          return Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: layoutChildren(boxSide),
+          );
+        } else {
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: layoutChildren(boxSide),
+          );
+        }
+      })),
     );
   }
 }
