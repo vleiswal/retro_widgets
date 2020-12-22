@@ -21,13 +21,13 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Center(
         child: Container(
-          color: Colors.red,
+          color: Colors.blue,
           child: Padding(
-            padding:
-                EdgeInsets.lerp(EdgeInsets.all(10), EdgeInsets.all(20), 0.1),
+            padding: EdgeInsets.all(20),
             child: Text(
               'Welcome',
               style: TextStyle(
