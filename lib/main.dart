@@ -50,11 +50,13 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       body: Center(child: Builder(builder: (context) {
         if (orientation.index == Orientation.landscape.index) {
+          print('Landscape....');
           return Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: layoutChildren(boxSide),
           );
         } else {
+          print('Portrait....');
           return Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: layoutChildren(boxSide),
